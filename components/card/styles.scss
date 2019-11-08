@@ -1,0 +1,41 @@
+.card {
+  background: white;
+  margin: 1.5rem 0;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.colored_bar {
+  background: grey;
+  height: 5px;
+}
+
+.inner {
+  padding: 0.7rem 0.5rem;
+}
+
+:global(.green) .colored_bar {
+  background: rgb(108, 187, 154);
+}
+
+:global(.yellow) .colored_bar {
+  background: rgb(211, 191, 115);
+}
+
+:global(.blue) .colored_bar {
+  background: rgb(70, 137, 168);
+}
+
+:global(.red) .colored_bar {
+  background: rgb(187, 107, 115);
+}
+
+:global(.purple) .colored_bar {
+  background: rgb(112, 99, 142);;
+}
+
+:global(.black) .colored_bar {
+  background: rgb(51, 51, 51);;
+}

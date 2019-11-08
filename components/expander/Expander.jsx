@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import useScroll from "../../hooks/use_scroll";
 import css from "./styles.scss";
 
-const Expander = ({ text, children }) => {
+const Expander = ({ text, className, children }) => {
   const [expanded, setExpanded] = useState(false);
   const [sticky, setSticky] = useState(false);
   const [padding, setPadding] = useState(0);
@@ -45,9 +45,13 @@ const Expander = ({ text, children }) => {
   });
 
   return (
-    <div ref={expanderRef} style={{ paddingTop: `${padding}px` }} className={`${css.expander} ${expanded && css.expanded} ${sticky && css.sticky}`}>
+    <div ref={expanderRef} style={{ paddingTop: `${padding}px` }} className={`${css.expander} ${expanded && css.expanded} ${sticky && css.sticky} ${className}`}>
       <div ref={headerRef} className={css.header} onClick={() => setExpanded(e => !e)}>
-        {text}
+        <div className={css.colored_bar} />
+
+        <div className={css.text}>
+          {text}
+        </div>
       </div>
 
       <div className={css.inner}>

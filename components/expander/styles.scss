@@ -4,23 +4,32 @@
 
 .header {
   background: white;
-  font-size: 0.9rem;
-  font-weight: 500;
   border: 1px solid #bbb;
   border-radius: 5px;
-  padding: 0.5rem 0.7rem;
   box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  overflow: hidden;
   position: relative;
 
-  &:after {
-    content: ">";
-    margin-left: 0.5rem;
-    font-size: 1.2rem;
-    font-weight: bold;
+  .colored_bar {
+    background: grey;
+    height: 5px;
+  }
+
+  .text {
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.3rem 0.7rem 0.4rem 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:after {
+      content: ">";
+      margin-left: 0.5rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
   }
 }
 
@@ -29,7 +38,7 @@
 }
 
 .expanded {
-  .header:after {
+  .header .text:after {
     transform: rotate(90deg);
   }
 
@@ -45,6 +54,31 @@
     left: 0;
     width: 100%;
     box-sizing: border-box;
+    border: none;
     border-radius: 0;
   }
+}
+
+:global(.green) .colored_bar {
+  background: rgb(108, 187, 154);
+}
+
+:global(.yellow) .colored_bar {
+  background: rgb(211, 191, 115);
+}
+
+:global(.blue) .colored_bar {
+  background: rgb(70, 137, 168);
+}
+
+:global(.red) .colored_bar {
+  background: rgb(187, 107, 115);
+}
+
+:global(.purple) .colored_bar {
+  background: rgb(112, 99, 142);;
+}
+
+:global(.black) .colored_bar {
+  background: rgb(51, 51, 51);;
 }
