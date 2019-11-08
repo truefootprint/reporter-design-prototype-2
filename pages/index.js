@@ -19,9 +19,7 @@ const Index = () => (
 
 
     <Expander text="Remove old path" className="green">
-      <Card>
-        <p>As part of the contract the builder has committed to remove all the old concrete. There will be no rubbish left and you will not have to go to the tip yourself.</p>
-      </Card>
+      <p>As part of the contract the builder has committed to remove all the old concrete. There will be no rubbish left and you will not have to go to the tip yourself.</p>
 
       <Card>
         <span className="ordinal">1 of 3</span>
@@ -42,9 +40,7 @@ const Index = () => (
     </Expander>
 
     <Expander text="Lay foundation" className="blue">
-      <Card>
-        <p>A common problem with builders laying foundations is that they use inferior quality cement. Sometimes they even don't use any cement and just use sand. In the long run this results in uneven paths. Another common issue is skimping on materials and making the foundation too short or too narrow.</p>
-      </Card>
+      <p>A common problem with builders laying foundations is that they use inferior quality cement. Sometimes they even don't use any cement and just use sand. In the long run this results in uneven paths. Another common issue is skimping on materials and making the foundation too short or too narrow.</p>
 
       <Card><p>Another card</p></Card>
       <Card><p>Another card</p></Card>
@@ -75,9 +71,7 @@ const Index = () => (
     </Expander>
 
     <Expander text="Laying the tiles" className="yellow">
-      <Card>
-        <p>Key things to look out for during this phase is whether they are using the right tiles, how level the tiles are, and whether they cover the foundation entirely.</p>
-      </Card>
+      <p>Key things to look out for during this phase is whether they are using the right tiles, how level the tiles are, and whether they cover the foundation entirely.</p>
 
       <Card><p>Another card</p></Card>
       <Card><p>Another card</p></Card>
@@ -108,9 +102,7 @@ const Index = () => (
     </Expander>
 
     <Expander text="Using the path" className="purple">
-      <Card>
-        <p>Throughout the course of the first year it is good to assess from time to time how well the path is working for you.</p>
-      </Card>
+      <p>Throughout the course of the first year it is good to assess from time to time how well the path is working for you.</p>
 
       <Card><p>Another card</p></Card>
       <Card><p>Another card</p></Card>

@@ -35,6 +35,10 @@
 
 .inner {
   display: none;
+
+  & > p {
+    margin: 1.5rem 0.5rem 2rem 0.5rem;
+  }
 }
 
 .expanded {
