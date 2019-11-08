@@ -1,0 +1,138 @@
+.multi_choice {
+  margin: 4rem 0;
+
+  li {
+    padding: 0.7rem 0.8rem;
+    margin: 0.8rem 0;
+    display: flex;
+    align-items: center;
+    box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    border-radius: 1vh;
+  }
+
+  .radio {
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background: white;
+    margin-right: 1.2rem;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      transform: scale(0.65);
+      border-radius: 50%;
+    }
+  }
+
+  .selected {
+    .radio:before {
+      background: #333;
+    }
+  }
+}
+
+:global(.green) .multi_choice {
+  li {
+    color: rgb(108, 187, 154);
+    border: 1px solid rgb(108, 187, 154);
+
+    .radio {
+      border: 1px solid rgb(108, 187, 154);
+    }
+
+    &.selected {
+      background: rgb(108, 187, 154);
+      color: white;
+    }
+  }
+}
+
+:global(.yellow) .multi_choice {
+  li {
+    color: rgb(211, 191, 115);
+    border: 1px solid rgb(211, 191, 115);
+
+    .radio {
+      border: 1px solid rgb(211, 191, 115);
+    }
+
+    &.selected {
+      background: rgb(211, 191, 115);
+      color: white;
+    }
+  }
+}
+
+:global(.blue) .multi_choice {
+  li {
+    color: rgb(70, 137, 168);
+    border: 1px solid rgb(70, 137, 168);
+
+    .radio {
+      border: 1px solid rgb(70, 137, 168);
+    }
+
+    &.selected {
+      background: rgb(70, 137, 168);
+      color: white;
+    }
+  }
+}
+
+:global(.red) .multi_choice {
+  li {
+    color: rgb(187, 107, 115);
+    border: 1px solid rgb(187, 107, 115);
+
+    .radio {
+      border: 1px solid rgb(187, 107, 115);
+    }
+
+    &.selected {
+      background: rgb(187, 107, 115);
+      color: white;
+    }
+  }
+}
+
+:global(.purple) .multi_choice {
+  li {
+    color: rgb(112, 99, 142);
+    border: 1px solid rgb(112, 99, 142);
+
+    .radio {
+      border: 1px solid rgb(112, 99, 142);
+    }
+
+    &.selected {
+      background: rgb(112, 99, 142);
+      color: white;
+    }
+  }
+}
+
+:global(.black) .multi_choice {
+  li {
+    color: rgb(51, 51, 51);
+    border: 1px solid rgb(51, 51, 51);
+
+    .radio {
+      border: 1px solid rgb(51, 51, 51);
+    }
+
+    &.selected {
+      background: rgb(51, 51, 51);
+      color: white;
+    }
+  }
+}

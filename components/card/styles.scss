@@ -13,29 +13,77 @@
 }
 
 .inner {
-  padding: 0.7rem 0.5rem;
+  padding: 0.7rem;
+
+  :global(.ordinal) {
+    float: right;
+    font-size: 0.8rem;
+    position: relative;
+    top: 0.2rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  button {
+    width: 100%;
+    background: grey;
+    padding: 0.9rem;
+    border-radius: 5px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+    box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+
+    &:focus {
+      outline: none;
+    }
+  }
 }
 
-:global(.green) .colored_bar {
-  background: rgb(108, 187, 154);
+:global(.green) {
+  .colored_bar { background: rgb(108, 187, 154); }
+  .inner h3 { color: rgb(108, 187, 154); }
+  .inner button { background: rgb(108, 187, 154); }
 }
 
-:global(.yellow) .colored_bar {
-  background: rgb(211, 191, 115);
+:global(.yellow) {
+  .colored_bar { background: rgb(211, 191, 115); }
+  .inner h3 { color: rgb(211, 191, 115); }
+  .inner button { background: rgb(211, 191, 115); }
 }
 
-:global(.blue) .colored_bar {
-  background: rgb(70, 137, 168);
+:global(.blue) {
+  .colored_bar { background: rgb(70, 137, 168); }
+  .inner h3 { color: rgb(70, 137, 168); }
+  .inner button { background: rgb(70, 137, 168); }
 }
 
-:global(.red) .colored_bar {
-  background: rgb(187, 107, 115);
+:global(.red) {
+  .colored_bar { background: rgb(187, 107, 115); }
+  .inner h3 { color: rgb(187, 107, 115); }
+  .inner button { background: rgb(187, 107, 115); }
 }
 
-:global(.purple) .colored_bar {
-  background: rgb(112, 99, 142);;
+:global(.purple) {
+  .colored_bar { background: rgb(112, 99, 142);; }
+  .inner h3 { color: rgb(112, 99, 142); }
+  .inner button { background: rgb(112, 99, 142); }
 }
 
-:global(.black) .colored_bar {
-  background: rgb(51, 51, 51);;
+:global(.black) {
+  .colored_bar { background: rgb(51, 51, 51);; }
+  .inner h3 { color: rgb(51, 51, 51); }
+  .inner button { background: rgb(51, 51, 51); }
 }
