@@ -1,0 +1,34 @@
+.expander {
+
+}
+
+.header {
+  background: #ccc;
+  padding: 0.5rem;
+  padding-right: 2.5rem;
+  position: relative;
+  cursor: pointer;
+  line-height: 1.4;
+
+  &:after {
+    content: ">";
+    position: absolute;
+    right: 1rem;
+    top: calc(50% - 0.7rem);
+    font-size: 1.2rem;
+  }
+}
+
+.inner {
+  display: none;
+}
+
+.expanded {
+  .header:after {
+    transform: rotate(90deg);
+  }
+
+  .inner {
+    display: block;
+  }
+}
