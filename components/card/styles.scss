@@ -1,6 +1,6 @@
 .card {
   background: white;
-  margin: 1.5rem 0;
+  margin: 2rem 0;
   border: 1px solid #bbb;
   border-radius: 5px;
   box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
@@ -30,6 +30,13 @@
 
   p {
     font-size: 0.95rem;
+  }
+
+  em {
+    color: #999;
+    font-style: italic;
+    display: block;
+    margin-top: 1.5rem;
   }
 
   button {
