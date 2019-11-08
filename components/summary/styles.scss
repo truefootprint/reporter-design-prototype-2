@@ -19,14 +19,26 @@
   button {
     background: white;
     width: 100%;
-    padding: 0.9rem 0;
     border: 1px solid #bbb;
     border-radius: 5px;
     font-size: 0.9rem;
+    text-align: left;
     letter-spacing: 0.5px;
     margin-bottom: 1.5rem;
     font-weight: 500;
     box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+
+    padding: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:after {
+      content: ">";
+      margin-left: 0.5rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
 
     &:focus {
       outline: none;

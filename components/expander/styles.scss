@@ -3,8 +3,13 @@
 }
 
 .header {
-  background: #ccc;
-  padding: 0.5rem;
+  background: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  padding: 0.5rem 0.7rem;
+  box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -17,8 +22,6 @@
     font-size: 1.2rem;
     font-weight: bold;
   }
-
-  box-shadow: 0 0 0.2rem #333;
 }
 
 .inner {
@@ -42,5 +45,6 @@
     left: 0;
     width: 100%;
     box-sizing: border-box;
+    border-radius: 0;
   }
 }
