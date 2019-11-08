@@ -1,4 +1,5 @@
-import { useState, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
+import smoothscroll from "smoothscroll-polyfill";
 import useScroll from "../../hooks/use_scroll";
 import css from "./styles.scss";
 
@@ -9,6 +10,14 @@ const Expander = ({ text, className, children }) => {
 
   const expanderRef = useRef();
   const headerRef = useRef();
+
+  const toggleExpanded = () => {
+    const expander = expanderRef.current;
+    if (!expander) return;
+
+    setExpanded(e => !e);
+    setTimeout(() => window.scroll({ top: expander.offsetTop, behavior: "smooth" }), 10);
+  };
 
   const headerHeight = () => {
     const header = headerRef.current;
@@ -44,9 +53,11 @@ const Expander = ({ text, className, children }) => {
     }
   });
 
+  useEffect(() => { smoothscroll.polyfill(); }, []);
+
   return (
     <div ref={expanderRef} style={{ paddingTop: `${padding}px` }} className={`${css.expander} ${expanded && css.expanded} ${sticky && css.sticky} ${className}`}>
-      <div ref={headerRef} className={css.header} onClick={() => setExpanded(e => !e)}>
+      <div ref={headerRef} className={css.header} onClick={toggleExpanded}>
         <div className={css.colored_bar} />
 
         <div className={css.text}>
