@@ -3,7 +3,7 @@ import Expander from "../components/expander";
 
 const Index = () => (
   <Layout>
-    <div style={{ width: "100%", height: "10rem", background: "#dff" }} />
+    <div style={{ width: "100%", height: "10rem", background: "#dff" }}>filler</div>
 
     <Expander text="hello">
       <p>first</p>

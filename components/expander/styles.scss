@@ -1,5 +1,5 @@
 .expander {
-
+  margin-bottom: 1rem;
 }
 
 .header {
@@ -10,6 +10,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 
   &:after {
     content: ">";
@@ -17,6 +18,8 @@
     font-size: 1.2rem;
     font-weight: bold;
   }
+
+  box-shadow: 0 0 0.2rem #333;
 }
 
 .inner {

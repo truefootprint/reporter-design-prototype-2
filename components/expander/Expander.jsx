@@ -17,30 +17,40 @@ const Expander = ({ text, children }) => {
     return header.getBoundingClientRect().height;
   };
 
-  const scrolledPast = () => {
+  const scrolledAbove = () => {
     const expander = expanderRef.current;
     if (!expander) return;
 
-    return window.pageYOffset > expander.offsetTop;
+    return window.pageYOffset < expander.offsetTop;
+  };
+
+  const scrolledBelow = () => {
+    const expander = expanderRef.current;
+    if (!expander) return;
+
+    return window.pageYOffset > expander.offsetTop + expander.offsetHeight;
   };
 
   useScroll(() => {
-    if (scrolledPast()) {
-      setSticky(true);
-      setPadding(headerHeight());
-    } else {
+    if (scrolledAbove()) {
       setSticky(false);
       setPadding(0);
+    } else {
+      setPadding(headerHeight());
+
+      if (!scrolledBelow()) {
+        setSticky(true);
+      }
     }
   });
 
   return (
-    <div ref={expanderRef} className={`${css.expander} ${expanded && css.expanded} ${sticky && css.sticky}`}>
+    <div ref={expanderRef} style={{ paddingTop: `${padding}px` }} className={`${css.expander} ${expanded && css.expanded} ${sticky && css.sticky}`}>
       <div ref={headerRef} className={css.header} onClick={() => setExpanded(e => !e)}>
         {text}
       </div>
 
-      <div className={css.inner} style={{ paddingTop: `${padding}px` }}>
+      <div className={css.inner}>
         {children}
       </div>
     </div>
