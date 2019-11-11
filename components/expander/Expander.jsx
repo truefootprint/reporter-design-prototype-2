@@ -43,9 +43,9 @@ const Expander = ({ text, className, children }) => {
   useScroll(() => {
     if (scrolledAbove()) {
       setSticky(false);
-      setPadding(0);
+      //setPadding(0);
     } else {
-      setPadding(headerHeight());
+      //setPadding(headerHeight());
 
       if (!scrolledBelow()) {
         setSticky(true);
