@@ -57,40 +57,82 @@
       outline: none;
     }
   }
+
+  :global(.start_button) {
+    text-decoration: none;
+    color: white;
+    background: white;
+    width: 100%;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+    text-align: left;
+    letter-spacing: 0.5px;
+    margin: 0.5rem 0;
+    font-weight: 500;
+    box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+
+    padding: 0.5rem 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:after {
+      content: ">";
+      margin-left: 0.5rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
 }
 
 :global(.green) {
   .colored_bar { background: rgb(108, 187, 154); }
   .inner h3 { color: rgb(108, 187, 154); }
   .inner button { background: rgb(108, 187, 154); }
+  :global(.start_button) { background: rgb(108, 187, 154); }
 }
 
 :global(.yellow) {
   .colored_bar { background: rgb(211, 191, 115); }
   .inner h3 { color: rgb(211, 191, 115); }
   .inner button { background: rgb(211, 191, 115); }
+  :global(.start_button) { background: rgb(211, 191, 115); }
 }
 
 :global(.blue) {
   .colored_bar { background: rgb(70, 137, 168); }
   .inner h3 { color: rgb(70, 137, 168); }
   .inner button { background: rgb(70, 137, 168); }
+  :global(.start_button) { background: rgb(70, 137, 168); }
 }
 
 :global(.red) {
   .colored_bar { background: rgb(187, 107, 115); }
   .inner h3 { color: rgb(187, 107, 115); }
   .inner button { background: rgb(187, 107, 115); }
+  :global(.start_button) { background: rgb(187, 107, 115); }
 }
 
 :global(.purple) {
   .colored_bar { background: rgb(112, 99, 142);; }
   .inner h3 { color: rgb(112, 99, 142); }
   .inner button { background: rgb(112, 99, 142); }
+  :global(.start_button) { background: rgb(112, 99, 142); }
 }
 
 :global(.black) {
   .colored_bar { background: rgb(51, 51, 51);; }
   .inner h3 { color: rgb(51, 51, 51); }
   .inner button { background: rgb(51, 51, 51); }
+  :global(.start_button) { background: rgb(51, 51, 51); }
 }
