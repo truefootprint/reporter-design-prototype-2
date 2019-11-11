@@ -8,6 +8,8 @@ import ExpectedValue from "../components/expected_value";
 
 const GardenPath = () => (
   <Layout>
+    <a href="/">&lt; Projects</a>
+
     <Summary>
       <h1>A path in the front garden</h1>
       <h2>Project summary</h2>
